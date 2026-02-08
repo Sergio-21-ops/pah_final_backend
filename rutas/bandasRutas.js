@@ -1,0 +1,12 @@
+import express from 'express';
+import { crearBanda , getBanda, getBanda_x_id,editarBanda,borrarBanda} from "../controladores/bandaControlador.js";
+
+const bandasRutas = express.Router();
+
+bandasRutas.post('/', crearBanda);
+bandasRutas.get('/', getBanda);
+bandasRutas.get('/:id', getBanda_x_id);
+bandasRutas.put('/:id', editarBanda);
+bandasRutas.delete('/:id', borrarBanda);
+
+export { bandasRutas };
