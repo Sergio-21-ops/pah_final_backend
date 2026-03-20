@@ -102,7 +102,7 @@ export async function agregarDisco(req,res) {
 
      try {
            const disco = new discoModelo({...req.body, 
-            imagenUrl: req.file ? `/uploads/${req.file.filename}` : null
+  imagenUrl: req.file ? `/uploads/${req.file.filename}` : null
 });
            const nuevoDisco = await disco.save();
            res.json(nuevoDisco);
